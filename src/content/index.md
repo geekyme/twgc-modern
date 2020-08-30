@@ -6,7 +6,7 @@ title: test
 
 # Hi people
 
-Welcome to your new Gatsby site.
+Welcome to your new Gatsby site. Test
 
 Now go build something great.
 
