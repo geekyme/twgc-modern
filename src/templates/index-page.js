@@ -1,11 +1,19 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
+import styled from "styled-components"
+
+const Title = styled.h2`
+  margin: 0 0 30px 0;
+  padding: 0;
+  color: red;
+  font-size: 30px;
+`
 
 export const IndexPageTemplate = ({ title, content }) => {
   return (
     <section className="section section--gradient">
-      <h1>{title}</h1>
+      <Title>{title}</Title>
       <div dangerouslySetInnerHTML={{ __html: content }} />
     </section>
   )

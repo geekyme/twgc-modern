@@ -1,6 +1,7 @@
 ---
 templateKey: index-page
 path: "/"
+title: test
 ---
 
 # Hi people
