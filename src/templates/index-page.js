@@ -1,29 +1,34 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
-import styled from "styled-components"
 import Layout from "../components/layout"
+import TaiwanImage from "../images/taiwan-unsplash.jpeg"
+import SectionApplicant from "../components/SectionApplicant"
+import GoldCardNews from "../components/GoldCardNews"
 
-const Title = styled.h2`
-  margin: 0 0 30px 0;
-  padding: 0;
-  color: red;
-  font-size: 30px;
-`
-
-export const IndexPageTemplate = ({ title, content }) => {
+export const IndexPageTemplate = ({
+  newApplicant,
+  existingApplicant,
+  news,
+}) => {
   return (
-    <section className="section section--gradient">
-      <Title>{title}</Title>
-      <div dangerouslySetInnerHTML={{ __html: content }} />
-    </section>
+    <main className="main wrap md">
+      <main className="home">
+        <SectionApplicant
+          data={newApplicant}
+          className="section newApplicant"
+        />
+        <SectionApplicant
+          data={existingApplicant}
+          className="section existingApplicant"
+        />
+        <GoldCardNews data={news} />
+        <section className="section homePicture">
+          <img src={TaiwanImage} alt="Taiwan" />
+        </section>
+      </main>
+    </main>
   )
-}
-
-IndexPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
 }
 
 const AboutPage = ({ data }) => {
@@ -31,7 +36,7 @@ const AboutPage = ({ data }) => {
 
   return (
     <Layout>
-      <IndexPageTemplate title={post.frontmatter.title} content={post.html} />
+      <IndexPageTemplate {...post.frontmatter} />
     </Layout>
   )
 }
@@ -45,9 +50,35 @@ export default AboutPage
 export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      html
       frontmatter {
-        title
+        news {
+          title
+          titleId
+          titleLink
+          list {
+            date
+            link
+            text
+          }
+        }
+
+        newApplicant {
+          title
+          list
+          buttons {
+            text
+            link
+          }
+        }
+
+        existingApplicant {
+          title
+          list
+          buttons {
+            text
+            link
+          }
+        }
       }
     }
   }
