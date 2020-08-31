@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import styled from "styled-components"
+import Layout from "../components/layout"
 
 const Title = styled.h2`
   margin: 0 0 30px 0;
@@ -29,7 +30,9 @@ const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
-    <IndexPageTemplate title={post.frontmatter.title} content={post.html} />
+    <Layout>
+      <IndexPageTemplate title={post.frontmatter.title} content={post.html} />
+    </Layout>
   )
 }
 

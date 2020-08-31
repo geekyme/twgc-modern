@@ -3,31 +3,56 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+  <header className="mainHeader">
+    <nav className="mainNavigation">
+      <a className="mainNavigation_logoLink" href="/">
+        <picture>
+          <source
+            srcSet="https://taiwangoldcard.com/images/gc-light.svg"
+            media="(prefers-color-scheme: dark)"
+          />
+          🇹🇼 Taiwan Gold Card
+        </picture>
+      </a>
+      <div className="search">
+        <label htmlFor="search" className="search_label"></label>
+        <input
+          type="search"
+          className="search_field"
+          placeholder="Search..."
+          id="search"
+        />
+        <div className="search_results"></div>
+      </div>
+      <ul className="mainNavigation_menu">
+        <li className="nav-item">
+          <a
+            className="nav-link"
+            href="https://visafinder.tw/gold-card-qualification/"
+            target="_blank"
+            rel="noopener nofollow"
+          >
+            <span>Do I qualify for the Gold Card?</span>
+          </a>
+        </li>
+        <li className="nav-item">
+          <a
+            className="nav-link"
+            href="https://taiwangoldcard.com/application-faq/"
+          >
+            <span>Application Process</span>
+          </a>
+        </li>
+        <li className="nav-item">
+          <a
+            className="nav-link"
+            href="https://taiwangoldcard.com/goldcard-holders-faq/"
+          >
+            <span>Life in Taiwan</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
 )
 
