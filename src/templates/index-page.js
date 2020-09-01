@@ -31,7 +31,7 @@ export const IndexPageTemplate = ({
   )
 }
 
-const AboutPage = ({ data }) => {
+const IndexPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
@@ -41,14 +41,14 @@ const AboutPage = ({ data }) => {
   )
 }
 
-AboutPage.propTypes = {
+IndexPage.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default AboutPage
+export default IndexPage
 
-export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
+export const indexPageQuery = graphql`
+  query IndexPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         news {

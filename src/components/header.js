@@ -5,7 +5,7 @@ import React from "react"
 const Header = ({ siteTitle }) => (
   <header className="mainHeader">
     <nav className="mainNavigation">
-      <a className="mainNavigation_logoLink" href="/">
+      <Link className="mainNavigation_logoLink" to="/">
         <picture>
           <source
             srcSet="https://taiwangoldcard.com/images/gc-light.svg"
@@ -13,7 +13,7 @@ const Header = ({ siteTitle }) => (
           />
           🇹🇼 Taiwan Gold Card
         </picture>
-      </a>
+      </Link>
       <div className="search">
         <label htmlFor="search" className="search_label"></label>
         <input
@@ -36,12 +36,9 @@ const Header = ({ siteTitle }) => (
           </a>
         </li>
         <li className="nav-item">
-          <a
-            className="nav-link"
-            href="https://taiwangoldcard.com/application-faq/"
-          >
+          <Link className="nav-link" to="/application-faq">
             <span>Application Process</span>
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
           <a
