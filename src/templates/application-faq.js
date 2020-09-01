@@ -3,8 +3,13 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 
-export const IndexPageTemplate = ({ html }) => {
-  return <div className="content" dangerouslySetInnerHTML={{ __html: html }} />
+export const IndexPageTemplate = ({ html, title }) => {
+  return (
+    <>
+      <h1>{title}</h1>
+      <div className="content" dangerouslySetInnerHTML={{ __html: html }} />
+    </>
+  )
 }
 
 const ApplicationFaqPage = ({ data }) => {
@@ -12,7 +17,7 @@ const ApplicationFaqPage = ({ data }) => {
 
   return (
     <Layout>
-      <IndexPageTemplate html={post.html} />
+      <IndexPageTemplate html={post.html} title={post.frontmatter.title} />
     </Layout>
   )
 }
@@ -27,6 +32,9 @@ export const applicationFaqPageQuery = graphql`
   query ApplicationFaqPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
+      frontmatter {
+        title
+      }
     }
   }
 `
