@@ -41,12 +41,9 @@ const Header = ({ siteTitle }) => (
           </Link>
         </li>
         <li className="nav-item">
-          <a
-            className="nav-link"
-            href="https://taiwangoldcard.com/goldcard-holders-faq/"
-          >
+          <Link className="nav-link" to="/goldcard-holders-faq">
             <span>Life in Taiwan</span>
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

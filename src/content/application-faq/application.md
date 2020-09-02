@@ -1,7 +1,7 @@
 ---
 templateKey: application-faq
 title: "The Gold Card Application"
-weight:
+weight: 3
 path: /application-faq/application
 ---
 

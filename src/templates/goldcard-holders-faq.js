@@ -2,16 +2,16 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import ApplicationFaqSidebar from "../components/ApplicationFaqSidebar"
+import GoldCardFaqSidebar from "../components/GoldCardFaqSidebar"
 
-const ApplicationFaqPage = ({ data }) => {
+const GoldcardHoldersFaqPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
       <main className="main wrap md">
         <div className="grid-auto">
-          <ApplicationFaqSidebar />
+          <GoldCardFaqSidebar />
           <div className="content">
             <h1>{post.frontmatter.title}</h1>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -22,14 +22,14 @@ const ApplicationFaqPage = ({ data }) => {
   )
 }
 
-ApplicationFaqPage.propTypes = {
+GoldcardHoldersFaqPage.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default ApplicationFaqPage
+export default GoldcardHoldersFaqPage
 
-export const applicationFaqPageQuery = graphql`
-  query ApplicationFaqPage($id: String!) {
+export const goldcardHoldersFaqPageQuery = graphql`
+  query GoldcardHoldersFaqPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
