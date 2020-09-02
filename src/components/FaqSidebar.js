@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Location } from "@reach/router"
+import slugify from "slugify"
 
 export default function FaqSidebar({ title, data, ...props }) {
   const [heading, ...other] = data
@@ -38,7 +39,15 @@ export default function FaqSidebar({ title, data, ...props }) {
                       <ul>
                         {node.headings.map(h => (
                           <li className="toc_item">
-                            <Link className="toc_link">{h.value}</Link>
+                            <a
+                              href={`#${slugify(h.value, {
+                                lower: true,
+                                strict: true,
+                              })}`}
+                              className="toc_link"
+                            >
+                              {h.value}
+                            </a>
                           </li>
                         ))}
                       </ul>
