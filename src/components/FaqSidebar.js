@@ -8,7 +8,6 @@ export default function FaqSidebar({ title, data, ...props }) {
   return (
     <Location>
       {({ location }) => {
-        console.log(location)
         return (
           <aside className="aside">
             <section className="section">
@@ -19,7 +18,7 @@ export default function FaqSidebar({ title, data, ...props }) {
               </Link>
               <section {...props}>
                 {other.map(({ node }) => (
-                  <div>
+                  <>
                     <Link
                       activeClassName="active"
                       className="toc_parent"
@@ -27,7 +26,15 @@ export default function FaqSidebar({ title, data, ...props }) {
                     >
                       <h3 className="section_link">{node.frontmatter.title}</h3>
                     </Link>
-                    <nav className="toc">
+                    <nav
+                      data-text={node.frontmatter.path}
+                      className={
+                        "toc " +
+                        (location.pathname === node.frontmatter.path
+                          ? "toc_active"
+                          : "")
+                      }
+                    >
                       <ul>
                         {node.headings.map(h => (
                           <li className="toc_item">
@@ -36,7 +43,7 @@ export default function FaqSidebar({ title, data, ...props }) {
                         ))}
                       </ul>
                     </nav>
-                  </div>
+                  </>
                 ))}
               </section>
             </section>
