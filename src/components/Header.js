@@ -36,12 +36,12 @@ const Header = ({ siteTitle }) => (
           </a>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/application-faq">
+          <Link className="nav-link" to="/application-faq/">
             <span>Application Process</span>
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/goldcard-holders-faq">
+          <Link className="nav-link" to="/goldcard-holders-faq/">
             <span>Life in Taiwan</span>
           </Link>
         </li>
