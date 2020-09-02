@@ -3,7 +3,7 @@ templateKey: application-faq
 title: "Do I qualify?"
 weight: 2
 description: How to qualify for the Taiwan Gold Card. Which category to apply under.
-path: /application-faq/qualifications
+path: /application-faq/qualifications/
 ---
 
 <!--- (c) Tom Fifield, licensed under a

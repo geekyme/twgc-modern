@@ -2,7 +2,7 @@
 title: "At Work"
 weight: 2
 templateKey: goldcard-holders-faq
-path: /goldcard-holders/at-work
+path: /goldcard-holders/at-work/
 ---
 
 <!--- (c) Tom Fifield, licensed under a

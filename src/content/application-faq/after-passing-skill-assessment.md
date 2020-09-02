@@ -2,7 +2,7 @@
 templateKey: application-faq
 title: "After passing skill assessment"
 weight: 5
-path: /application-faq/after-passing-skill-assessment
+path: /application-faq/after-passing-skill-assessment/
 ---
 
 <!--- (c) Tom Fifield, licensed under a

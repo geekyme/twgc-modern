@@ -2,7 +2,7 @@
 title: "Life in Taiwan"
 weight: 4
 templateKey: goldcard-holders-faq
-path: /goldcard-holders/life-in-taiwan
+path: /goldcard-holders/life-in-taiwan/
 ---
 
 <!--- (c) Tom Fifield, licensed under a

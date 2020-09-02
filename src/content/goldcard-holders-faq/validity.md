@@ -2,7 +2,7 @@
 title: "Renewal & Validity"
 weight: 8
 templateKey: goldcard-holders-faq
-path: /goldcard-holders/validity
+path: /goldcard-holders/validity/
 ---
 
 <!--- (c) Tom Fifield, licensed under a

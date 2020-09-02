@@ -1,7 +1,7 @@
 ---
 templateKey: application-faq
 title: "What is the Gold Card?"
-path: /application-faq/what-is-taiwan-gold-card
+path: /application-faq/what-is-taiwan-gold-card/
 weight: 1
 ---
 

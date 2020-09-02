@@ -2,7 +2,7 @@
 title: "Tax"
 weight: 6
 templateKey: goldcard-holders-faq
-path: /goldcard-holders/tax
+path: /goldcard-holders/tax/
 ---
 
 <!--- (c) Tom Fifield, licensed under a

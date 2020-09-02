@@ -2,7 +2,7 @@
 templateKey: application-faq
 title: "The Gold Card Application"
 weight: 3
-path: /application-faq/application
+path: /application-faq/application/
 ---
 
 <!--- (c) Tom Fifield, licensed under a

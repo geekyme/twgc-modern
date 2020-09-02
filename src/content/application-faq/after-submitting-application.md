@@ -2,7 +2,7 @@
 templateKey: application-faq
 title: "After submitting your application"
 weight: 4
-path: /application-faq/after-submitting-application
+path: /application-faq/after-submitting-application/
 ---
 
 <!--- (c) Tom Fifield, licensed under a
