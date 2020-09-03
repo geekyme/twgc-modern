@@ -10,53 +10,60 @@ export default function FaqSidebar({ title, data, ...props }) {
     <Location>
       {({ location }) => {
         return (
-          <aside className="aside">
-            <section className="section">
-              <Link to={heading.node.frontmatter.path} activeClassName="active">
-                <h2 className="section_title">
-                  {heading.node.frontmatter.title}
-                </h2>
-              </Link>
-              <section {...props}>
-                {other.map(({ node }) => (
-                  <>
-                    <Link
-                      activeClassName="active"
-                      className="toc_parent"
-                      to={node.frontmatter.path}
-                    >
-                      <h3 className="section_link">{node.frontmatter.title}</h3>
-                    </Link>
-                    <nav
-                      data-text={node.frontmatter.path}
-                      className={
-                        "toc " +
-                        (location.pathname === node.frontmatter.path
-                          ? "toc_active"
-                          : "")
-                      }
-                    >
-                      <ul>
-                        {node.headings.map(h => (
-                          <li className="toc_item">
-                            <a
-                              href={`#${slugify(h.value, {
-                                lower: true,
-                                strict: true,
-                              })}`}
-                              className="toc_link"
-                            >
-                              {h.value}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </nav>
-                  </>
-                ))}
+          <div>
+            <aside className="aside">
+              <section className="section">
+                <Link
+                  to={heading.node.frontmatter.path}
+                  activeClassName="active"
+                >
+                  <h2 className="section_title">
+                    {heading.node.frontmatter.title}
+                  </h2>
+                </Link>
+                <section {...props}>
+                  {other.map(({ node }) => (
+                    <>
+                      <Link
+                        activeClassName="active"
+                        className="toc_parent"
+                        to={node.frontmatter.path}
+                      >
+                        <h3 className="section_link">
+                          {node.frontmatter.title}
+                        </h3>
+                      </Link>
+                      <nav
+                        data-text={node.frontmatter.path}
+                        className={
+                          "toc " +
+                          (location.pathname === node.frontmatter.path
+                            ? "toc_active"
+                            : "")
+                        }
+                      >
+                        <ul>
+                          {node.headings.map(h => (
+                            <li className="toc_item">
+                              <a
+                                href={`#${slugify(h.value, {
+                                  lower: true,
+                                  strict: true,
+                                })}`}
+                                className="toc_link"
+                              >
+                                {h.value}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </nav>
+                    </>
+                  ))}
+                </section>
               </section>
-            </section>
-          </aside>
+            </aside>
+          </div>
         )
       }}
     </Location>
