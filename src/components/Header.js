@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import SearchBar from "./SearchBar"
 
 const Header = ({ siteTitle }) => (
   <header className="mainHeader">
@@ -14,16 +15,7 @@ const Header = ({ siteTitle }) => (
           🇹🇼 Taiwan Gold Card
         </picture>
       </Link>
-      <div className="search">
-        <label htmlFor="search" className="search_label"></label>
-        <input
-          type="search"
-          className="search_field"
-          placeholder="Search..."
-          id="search"
-        />
-        <div className="search_results"></div>
-      </div>
+      <SearchBar />
       <ul className="mainNavigation_menu">
         <li className="nav-item">
           <a

@@ -8,6 +8,25 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-lunr`,
+      options: {
+        languages: [{ name: "en" }],
+        fields: [
+          { name: "title", store: true },
+          { name: "content", store: true },
+          { name: "path", store: true },
+        ],
+        filterNodes: node => !isNil(node.frontmatter),
+        resolvers: {
+          MarkdownRemark: {
+            title: node => node.frontmatter.title,
+            content: node => node.rawMarkdownBody,
+            path: node => node.frontmatter.path,
+          },
+        },
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -48,6 +67,7 @@ module.exports = {
         ],
       },
     },
+
     "gatsby-plugin-catch-links",
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
