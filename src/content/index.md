@@ -55,5 +55,5 @@ existingApplicant:
     - text: Join the Gold Card Network
       link: https://forms.gle/K88uVy2jMW61DpT2A
     - text: Resources for the Gold Card holders
-      link: http://localhost:8000/goldcard-holders-faq/
+      link: /goldcard-holders-faq/
 ---
