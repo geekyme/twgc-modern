@@ -2,7 +2,7 @@
 title: "Migration Pathways"
 weight: 5
 templateKey: goldcard-holders-faq
-path: /goldcard-holders/migration-pathways/
+path: /goldcard-holders-faq/migration-pathways/
 ---
 
 <!--- (c) Tom Fifield, licensed under a

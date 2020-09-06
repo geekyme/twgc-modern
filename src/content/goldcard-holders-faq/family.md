@@ -2,7 +2,7 @@
 title: "Family"
 weight: 7
 templateKey: goldcard-holders-faq
-path: /goldcard-holders/family/
+path: /goldcard-holders-faq/family/
 ---
 
 <!--- (c) Tom Fifield, licensed under a
