@@ -29,4 +29,8 @@ list:
   - date: "2020-05-27"
     link: https://meet.bnext.com.tw/intl/articles/view/46488
     text: "Goldcard holder: Starting an eye yoga career"
+  - date: "2020-04-13"
+    link: https://home.kpmg/us/en/home/insights/2020/04/tnf-taiwan-tax-return-tax-payment-deadlines-extended-covid-19.html
+    text: Tax payment has been extended to June 30th 2020
+"
 ---
