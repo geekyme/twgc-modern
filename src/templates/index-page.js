@@ -18,7 +18,7 @@ export const IndexPageTemplate = ({ newApplicant, existingApplicant }) => {
           data={existingApplicant}
           className="section existingApplicant"
         />
-        <GoldCardNews />
+        <GoldCardNews limitContent={8} />
         <section className="section homePicture">
           <img src={TaiwanImage} alt="Taiwan" />
         </section>

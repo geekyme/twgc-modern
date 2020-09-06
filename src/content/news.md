@@ -1,5 +1,5 @@
 ---
-templateKey: plain
+templateKey: news
 path: "/news"
 title: Gold Card News
 titleId: gold-card-news
