@@ -6,11 +6,7 @@ import TaiwanImage from "../images/taiwan-unsplash.jpeg"
 import SectionApplicant from "../components/SectionApplicant"
 import GoldCardNews from "../components/GoldCardNews"
 
-export const IndexPageTemplate = ({
-  newApplicant,
-  existingApplicant,
-  news,
-}) => {
+export const IndexPageTemplate = ({ newApplicant, existingApplicant }) => {
   return (
     <main className="main wrap md">
       <main className="home">
@@ -22,7 +18,7 @@ export const IndexPageTemplate = ({
           data={existingApplicant}
           className="section existingApplicant"
         />
-        <GoldCardNews data={news} />
+        <GoldCardNews />
         <section className="section homePicture">
           <img src={TaiwanImage} alt="Taiwan" />
         </section>
@@ -51,17 +47,6 @@ export const indexPageQuery = graphql`
   query IndexPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
-        news {
-          title
-          titleId
-          titleLink
-          list {
-            date
-            link
-            text
-          }
-        }
-
         newApplicant {
           title
           list
