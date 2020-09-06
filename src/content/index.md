@@ -4,7 +4,7 @@ path: "/"
 newApplicant:
   title: Applying for the Gold Card?
   titleId: applying-for-the-gold-card
-  titleLink: https://taiwangoldcard.com/#applying-for-the-gold-card
+  titleLink: /#applying-for-the-gold-card
   list:
     - All the answers about the Gold Card
     - How long does the process take?
@@ -16,7 +16,7 @@ newApplicant:
 existingApplicant:
   title: Already a Gold Card Holder?
   titleId: already-a-gold-card-holder
-  titleLink: https://taiwangoldcard.com/#already-a-gold-card-holder
+  titleLink: /#already-a-gold-card-holder
   list:
     - Access to our chat group where we help each other
     - Jobs opportunities that require our expertise

@@ -3,7 +3,7 @@ templateKey: news
 path: "/news"
 title: Gold Card News
 titleId: gold-card-news
-titleLink: https://taiwangoldcard.com/#gold-card-news
+titleLink: /#gold-card-news
 list:
   - date: "2020-08-28"
     link: https://www.facebook.com/events/670223513845439

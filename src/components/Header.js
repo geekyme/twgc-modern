@@ -2,16 +2,14 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import SearchBar from "./SearchBar"
+import Icon from "../icons/gc-light.svg"
 
 const Header = ({ siteTitle }) => (
   <header className="mainHeader">
     <nav className="mainNavigation">
       <Link className="mainNavigation_logoLink" to="/">
         <picture>
-          <source
-            srcSet="https://taiwangoldcard.com/images/gc-light.svg"
-            media="(prefers-color-scheme: dark)"
-          />
+          <source srcSet={Icon} media="(prefers-color-scheme: dark)" />
           🇹🇼 Taiwan Gold Card
         </picture>
       </Link>

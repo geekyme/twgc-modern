@@ -1,6 +1,6 @@
 import React from "react"
 
-import LinkIcon from "../images/link.svg"
+import LinkIcon from "../icons/link.svg"
 
 export default function SectionApplicant({ data, ...other }) {
   return (

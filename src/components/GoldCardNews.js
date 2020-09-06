@@ -1,6 +1,6 @@
 import React from "react"
 
-import LinkIcon from "../images/link.svg"
+import LinkIcon from "../icons/link.svg"
 import { StaticQuery, graphql, Link } from "gatsby"
 
 export default function GoldCardNews({ limitContent }) {
