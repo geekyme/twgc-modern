@@ -45,7 +45,7 @@ export default function FaqSidebar({ title, data, ...props }) {
                         <ul>
                           {node.headings.map(h => (
                             <li className="toc_item">
-                              <a
+                              <Link
                                 href={`#${slugify(h.value, {
                                   lower: true,
                                   strict: true,
@@ -53,7 +53,7 @@ export default function FaqSidebar({ title, data, ...props }) {
                                 className="toc_link"
                               >
                                 {h.value}
-                              </a>
+                              </Link>
                             </li>
                           ))}
                         </ul>

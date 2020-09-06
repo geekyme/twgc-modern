@@ -13,6 +13,15 @@ import Header from "./Header"
 import "./full.css"
 import Footer from "./Footer"
 
+if (typeof window !== "undefined") {
+  // eslint-disable-next-line global-require
+  require("smooth-scroll")('a[href*="#"]', {
+    easing: "Linear",
+    speed: 10,
+    speedAsDuration: true,
+  })
+}
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
